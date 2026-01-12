@@ -1,14 +1,32 @@
-<!doctype html!>
-    <html>
-        <head>
-            <title></title>
-            <meta charset="utf-8"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <link rel='stylesheet' href='index.css'></link>
-        </head>
-        <body>
-            <canvas width="600" height="400" id="space"></canvas>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Clock UI</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <canvas id="space"></canvas>
+    <button id="addClock" class="floating-btn">➕ Add Clock</button>
+    <div id="settingsTrigger" class="floating-btn semi-btn">⚙ Clock Settings</div>
+    <div id="clockSettingsPanel">
+        <h2>Clock Settings</h2>
+        <div class="control-group">
+            <label for="timeZone">Time zone / offset:</label>
+            <select id="timeZone">
+                <option value="local">Local</option>
+                <option value="UTC">UTC</option>
+                <option value="UTC-5">UTC-5</option>
+                <option value="UTC+1">UTC+1</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <button id="pauseResume">⏸ / ▶ Pause/Resume</button>
+        </div>
+        <div class="close-panel" id="closeSettings">&times;</div>
+    </div>
 
-            <script src='index.js'></script>
-        </body>
-    </html>
+    <script src="index.js"></script>
+</body>
+</html>
